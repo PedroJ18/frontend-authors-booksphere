@@ -1,0 +1,23 @@
+<mat-dialog-content>
+  <h4><strong>Select a reason for reporting:</strong></h4>
+  <mat-radio-group [(ngModel)]="selectedReason">
+    <mat-radio-button value="Inappropriate Content">Inappropriate Content</mat-radio-button><br/>
+    <mat-radio-button value="Spam">Spam</mat-radio-button><br/>
+    <mat-radio-button value="Others">Others</mat-radio-button>
+  </mat-radio-group>
+
+  <!-- Mostrar input solo si se selecciona la opción 'Others' -->
+  <div>
+    @if (selectedReason === 'Others') {
+      <mat-form-field>
+        <input matInput placeholder="Please specify the reason" [(ngModel)]="personalizedReason">
+      </mat-form-field>
+    }
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button (click)="submitReport()">Submit</button>
+</mat-dialog-actions>
+
