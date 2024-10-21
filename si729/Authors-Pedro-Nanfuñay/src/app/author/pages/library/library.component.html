@@ -1,0 +1,18 @@
+<div class="card-book-container">
+  <div *ngFor="let book of library" class="book-card">
+    <mat-card class="book-card-content" appearance="outlined">
+      <img [src]="book.portada" class="book-cover" alt="Book Cover"> <!-- Portada del libro -->
+      <mat-card-header>
+        <!-- Detalles del libro -->
+        <mat-card-title>{{ book.titulo }}</mat-card-title>
+        <mat-card-subtitle>{{ book.autor }}</mat-card-subtitle>
+        <span *ngIf="book.promocionado" class="promoted-badge">{{ 'library.promotedLabel' | translate }}</span>
+      </mat-card-header>
+
+      <!-- Sección de botones de acción -->
+      <mat-card-actions>
+        <button mat-button (click)="goToDetails(book.id)">{{ 'library.viewDetailsButton' | translate }}</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
