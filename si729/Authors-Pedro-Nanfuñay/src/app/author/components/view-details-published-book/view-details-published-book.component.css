@@ -1,0 +1,87 @@
+/* Estilo para el contenedor principal de la página */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilo para la fila que contiene la portada y la información del libro */
+.book-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+/* Estilo para la imagen de la portada */
+.published-book-cover {
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Estilo para la columna de detalles del libro */
+.details-published-book {
+  margin-top: 100px;
+  margin-right: 100px;
+  text-align: justify;
+}
+
+/* Estilo para titulos y subtitulos */
+h2, h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Estilos para textos */
+p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Estilo para mantener el texto de descripcion del libro de manera ordenada */
+.description {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Estilo para el contenedor de los botones de acción */
+.button-actions-container {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 85px;
+}
+
+/* Estilo para los botones */
+.statistics-button, .promote-button {
+  background-color: #e04e0b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px; /* Añade separación entre los botones */
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para la sección de comentarios */
+.comments-section {
+  margin-top: 40px;
+}
+
+/* Estilo para los card de los comentarios */
+.comment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para las alertas en la página */
+.alert-info {
+  background-color: #e9f7fd;
+  border-color: #b8e2f5;
+  color: #31708f;
+}

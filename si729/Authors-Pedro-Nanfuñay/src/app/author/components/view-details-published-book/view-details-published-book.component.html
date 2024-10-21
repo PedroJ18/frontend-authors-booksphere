@@ -1,0 +1,29 @@
+<div *ngIf="publishedBook" class="container">
+  <div class="book-detail-row">
+    <!-- Portada del libro -->
+    <div class="col-md-6 text-center">
+      <img [src]="publishedBook.portada" class="published-book-cover">
+    </div>
+
+    <!-- Información del libro -->
+    <div class="details-published-book">
+      <h3>{{ 'viewDetailsBook.title' | translate }}: {{ publishedBook.titulo }}</h3>
+      <h4>{{ 'viewDetailsBook.author' | translate }}: {{ publishedBook.autor }}</h4>
+      <p>{{ 'viewDetailsBook.categories' | translate }}: {{ publishedBook.categorias }}</p>
+      <p class="description">{{ 'viewDetailsBook.description' | translate }}: {{ publishedBook.descripcion }}</p>
+      <p>{{ 'viewDetailsBook.price' | translate }}: {{ publishedBook.precio }}</p>
+      <p>{{ 'viewDetailsBook.formats' | translate }}: {{ publishedBook.formato }}</p>
+
+      <!-- Contenedor de botones de Stadistics y Promote -->
+      <div class="button-actions-container">
+        <button mat-flat-button class="statistics-button" [routerLink]="['/statistics', publishedBook.id]">{{ 'viewDetailsBook.statisticsButton' | translate }}</button>
+        <button mat-flat-button class="promote-button" [routerLink]="['/promote', publishedBook.id]">{{ 'viewDetailsBook.promoteButton' | translate }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seccion Comentarios -->
+  <div class="comments-section">
+    <app-published-book-comments></app-published-book-comments>
+  </div>
+</div>
