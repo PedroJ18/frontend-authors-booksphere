@@ -1,0 +1,63 @@
+<div>
+  <div class="comments-section">
+    <h3>{{ 'commentsBook.comments' | translate }}:</h3>
+
+    <!-- Lista de comentarios -->
+    <div *ngFor="let comment of publishedBook.comments" class="comment-card">
+      <h5>{{ comment.username }}</h5>
+      <p><strong>{{ 'commentsBook.date' | translate }}: </strong> {{ comment.date }}</p>
+      <p><strong>{{ 'commentsBook.content' | translate }}: </strong>{{ comment.content }}</p>
+      <p><strong>{{ 'commentsBook.rating' | translate }}: </strong> {{ comment.rating }}/5</p>
+
+      <!-- Ícono de opciones para reportar -->
+      <div class="menu-actions">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu-icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item class="report-button" (click)="reportarComentario(comment)">
+            <mat-icon>warning</mat-icon>
+            <span>{{ 'commentsBook.reportButton' | translate }}</span>
+          </button>
+          <button mat-menu-item class="eliminate-button" (click)="eliminarComentario(comment)">
+            <mat-icon class="eliminate-icon">dangerous</mat-icon>
+            <span>{{ 'commentsBook.eliminateButton' | translate }}</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <div class="button-answer-container">
+        <!-- Botón de responder -->
+        <button class="button-answer" (click)="responderComentario(comment)">
+          {{comment.mostrandoRespuesta ? 'Cancel': 'Respond'}}
+        </button>
+
+        <!-- Caja de texto para la respuesta, se muestra solo si 'mostrandoRespuesta' es true -->
+        <div *ngIf="comment.mostrandoRespuesta" class="response-box">
+          <textarea class="text-content" [(ngModel)]="comment.respuesta" rows="2" placeholder="{{ 'commentsBook.respondPlaceHolder' | translate }}"></textarea>
+          <button class="send-answer-button" (click)="enviarRespuesta(comment)">{{ 'commentsBook.sendAnswerButton' | translate }}</button>
+        </div>
+      </div>
+
+      <div *ngFor="let respuesta of comment.respuestas">
+        <p>{{ respuesta.username }} - {{ respuesta.date | date:'short' }}: {{ respuesta.content }}</p>
+      </div>
+
+      <!-- Mostrar las respuestas debajo del comentario -->
+      <div *ngIf="comment.respuestas?.length > 0">
+        <h6>Responses:</h6>
+        <ul>
+          <li *ngFor="let respuesta of comment.respuestas">
+            <h5><strong>{{ publishedBook.autor }}</strong></h5>
+            <p> {{ respuesta }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Si no hay comentarios -->
+    <div *ngIf="publishedBook?.comments?.length === 0" class="no-comments-section">
+      {{ 'commentsBook.noComments' | translate }}.
+    </div>
+  </div>
+</div>

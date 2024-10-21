@@ -1,0 +1,110 @@
+/* Estilos para la sección de comentarios */
+.comments-section {
+  margin-top: 2rem; /* Separación superior */
+}
+
+/* Estilos para cada comentario (card) */
+.comment-card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word; /* Evita que el texto se desborde en pantallas pequeñas */
+}
+
+/* Estilo para el título del comentario (nombre del usuario) */
+.comment-card h5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para las fechas y calificación */
+.comment-card p {
+  margin-bottom: 0.3rem;
+}
+
+/* Alinear el botón de opciones (menu) a la derecha */
+.comment-card .menu-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10; /* Asegura que el ícono esté por encima del contenido */
+}
+
+/* Estilo para el botón Eliminate */
+.eliminate-button {
+  color: red; /* Cambia el color del texto a rojo */
+}
+
+.eliminate-icon {
+  color: red;
+}
+
+/* Botón de responder alineado debajo del comentario */
+.button-answer-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.button-answer {
+  align-self: flex-start; /* El botón de respuesta estará alineado a la izquierda */
+  margin-top: 1rem;
+  background-color: #e4864f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-answer:hover {
+  background-color: #e04e0b; /* Cambia el color en hover */
+}
+
+/* Estilo para la caja de texto de respuesta */
+.response-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content {
+  width: 98%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+/* Botón de enviar respuesta */
+.send-answer-button {
+  margin-top: 0.5rem;
+  background-color: #6e4945;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 20%;
+  margin-left: 55rem;
+}
+
+.send-answer-button:hover {
+  background-color: #3E2723;
+}
+
+/* Estilos para la sección sin comentarios */
+.no-comments-section {
+  padding: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #6c757d;
+}
