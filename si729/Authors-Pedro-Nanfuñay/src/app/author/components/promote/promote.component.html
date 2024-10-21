@@ -1,0 +1,22 @@
+<div class="promote-section">
+  <h2><strong>{{ 'promoteBook.promoteTitle' | translate }}</strong></h2>
+
+  <p class="description">{{ 'promoteBook.promoteDescription' | translate }}</p>
+
+  <div class="payment-info">
+    <p><strong>{{ 'promoteBook.selectedPayment' | translate }}:</strong> ${{ value }}</p>
+    <p><strong>{{ 'promoteBook.estimatedReach' | translate }}:</strong> {{ value * 10 }} readers</p>
+    <p><strong>{{ 'promoteBook.startDate' | translate }}:</strong> {{ startDate | date:'MMMM d, y' }}</p>
+    <p><strong>{{ 'promoteBook.endDate' | translate }}:</strong> {{ endDate | date:'MMMM d, y' }}</p>
+  </div>
+
+  <mat-slider
+    class="example-margin custom-slider"
+    [max]="500"
+    [min]="50"
+    [step]="10">
+    <input matSliderThumb [(ngModel)]="value" #slider>
+  </mat-slider>
+
+  <button mat-raised-button color="primary" class="promote-button" (click)="promoteBook()">{{ 'promoteBook.promoteButton' | translate }}</button>
+</div>

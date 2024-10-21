@@ -1,0 +1,42 @@
+.promote-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.payment-info {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.custom-slider {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.promote-button {
+  margin-top: 20px;
+  width: 150px;
+  background-color: #e04e0b;
+  color: white;
+}
