@@ -1,0 +1,46 @@
+<mat-stepper labelPosition="bottom" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>{{ 'stepperPublishBook.firstStep' | translate }}</ng-template>
+
+      <div class="container">
+        <app-upload-book-cover></app-upload-book-cover>
+        <app-details-publish-book
+        (publishedBookEmitter)="publishedBookRecieved($event)"
+        ></app-details-publish-book>
+      </div>
+
+      <div class="button-next-container">
+        <button mat-button matStepperNext class="button-next">{{ 'stepperPublishBook.nextButton1' | translate }}</button>
+      </div>
+    </form>
+
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>{{ 'stepperPublishBook.secondStep' | translate }}</ng-template>
+      <div>
+        <app-select-format-published-book
+        (formatSelectedEmitter)="formatPublishedBookRecived($event)"
+        ></app-select-format-published-book>
+      </div>
+      <div class="button-container-2">
+        <button mat-button matStepperPrevious class="button-back-2">{{ 'stepperPublishBook.backButton2' | translate }}</button>
+        <button mat-button matStepperNext class="button-next-2">{{ 'stepperPublishBook.nextButton2' | translate }}</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>{{ 'stepperPublishBook.thirdStep' | translate }}</ng-template>
+    <div class="stepper-container-3">
+      <h3>{{ 'stepperPublishBook.thirdStepTitle' | translate }}</h3>
+      <p>{{ 'stepperPublishBook.thirdStepDescription' | translate }}</p>
+    </div>
+    <div class="button-container-3">
+      <button mat-button matStepperPrevious class="button-back-3">{{ 'stepperPublishBook.backButton3' | translate }}</button>
+      <button class="publish-button" mat-raised-button color="primary" (click)="publishBook()">{{ 'stepperPublishBook.publishButton' | translate }}</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+
