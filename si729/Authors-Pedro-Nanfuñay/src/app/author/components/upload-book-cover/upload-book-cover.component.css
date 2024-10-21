@@ -1,0 +1,30 @@
+/* Contenedor para la portada */
+.upload-container {
+  width: 500px; /* Deja que ocupe todo el espacio disponible del contenedor */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* Botón para subir la portada */
+.upload-button {
+  background-color: orangered;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* Imagen de la portada */
+.cover-image {
+  margin-top: 20px;
+  width: 200px;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}

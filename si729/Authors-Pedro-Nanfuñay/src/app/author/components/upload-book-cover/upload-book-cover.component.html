@@ -1,0 +1,5 @@
+<div class="upload-container">
+  <label for="fileInput" class="upload-button">{{ 'uploadCoverImage' | translate }}</label>
+  <input type="file" id="fileInput" (change)="onFileSelected($event)" accept="image/*" hidden>
+  <img bookCover="imageUrl" [src]="imageUrl" class="cover-image">
+</div>
