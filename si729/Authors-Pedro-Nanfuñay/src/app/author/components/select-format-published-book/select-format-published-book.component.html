@@ -1,0 +1,35 @@
+<div class="form-group" style="text-align: center">
+  <h3>{{ 'selectFormatPublishedBook.title' | translate }}</h3>
+  <div class="checkbox-container">
+    <label>
+      <input type="checkbox" (change)="toggleFormat('physical', $event)" /> {{ 'selectFormatPublishedBook.physicalFormat' | translate }}
+    </label>
+    <label style="margin-left: 20px;">
+      <input type="checkbox" (change)="toggleFormat('digital', $event)" /> {{ 'selectFormatPublishedBook.digitalFormat' | translate }}
+    </label>
+  </div>
+
+  <!-- Selección de formatos -->
+  <div class="Select-formats"></div>
+  @if (selectedFormats.length > 0) {
+      @if (isPhysicalSelected() && isDigitalSelected()) {
+        <p>{{ 'selectFormatPublishedBook.selectedPhysical&Digital' | translate }}</p>
+      }
+      @if (isPhysicalSelected() && !isDigitalSelected()) {
+        <p>{{ 'selectFormatPublishedBook.selectedPhysical' | translate }}</p>
+      }
+      @if (!isPhysicalSelected() && isDigitalSelected()) {
+        <p>{{ 'selectFormatPublishedBook.selectedDigital' | translate }}</p>
+      }
+    }
+
+  <div class="select-format-digital">
+    @if (isDigitalSelected()) {
+      <label class="labelFile" for="fileInputDigital">{{ 'selectFormatPublishedBook.uploadFile' | translate }}</label> <br>
+      <input class="inputFile" type="file" id="fileInputDigital" (change)="fileSelected($event)" accept=".pdf,.epub" />
+    }
+  </div>
+
+  <button class="save-button" (click)="sendFormatsBook()">{{ 'selectFormatPublishedBook.saveButton' | translate }}</button>
+</div>
+
