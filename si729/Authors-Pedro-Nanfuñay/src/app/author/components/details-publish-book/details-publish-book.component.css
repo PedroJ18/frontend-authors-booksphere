@@ -1,0 +1,22 @@
+/* Contenedor del formulario de detalles del libro */
+.published-book-info {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-right: 80px;
+  padding-top: 20px;
+}
+
+.save-button {
+  background-color: #3E2723;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
+  box-sizing: border-box;
+  margin-left: 10rem;
+}
+
+
