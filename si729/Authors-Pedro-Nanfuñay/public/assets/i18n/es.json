@@ -1,0 +1,91 @@
+{
+  "optionsMenu": {
+    "store": "Tienda",
+    "library": "Librería",
+    "community": "Communidad",
+    "friends": "Amigos"
+  },
+  "optionsStore": {
+    "myStore": "Mi Tienda",
+    "publishBook": "Publicar Libro"
+  },
+  "pageNotFound": {
+    "title": "Ups! Esta página no existe",
+    "description": "Porfavor regresa a la página de la tienda."
+  },
+  "stepperPublishBook": {
+    "firstStep": "Ingresar datos del libro",
+    "nextButton1": "Siguiente",
+    "secondStep": "Seleccionar formato",
+    "backButton2": "Volver",
+    "nextButton2": "Siguiente",
+    "thirdStep": "Listo",
+    "thirdStepTitle": "Felicidades!",
+    "thirdStepDescription": "Tu libro ha sido aceptado para su publicación. Por favor presiona el botón \"Publicar\".",
+    "backButton3": "Volver",
+    "publishButton": "Publicar"
+  },
+  "uploadCoverImage": "Subir imagen de portada",
+  "detailsPublishBook": {
+    "title": "Título",
+    "titlePlaceHolder": "Ingresa el título de tu libro",
+    "author": "Autor",
+    "authorPlaceHolder": "Ingresa el nombre del autor",
+    "categories": "Categorias",
+    "description": "Descripción",
+    "descriptionPlaceHolder": "Ingresa una breve descripción del libro",
+    "cost": "Costo",
+    "costPlaceHolder": "Ingresa el costo de tu libro",
+    "saveButton": "Guardar"
+  },
+  "selectFormatPublishedBook": {
+    "title": "Selecciona los formatos disponibles:",
+    "physicalFormat": "Físico",
+    "digitalFormat": "Digital",
+    "selectedPhysical&Digital": "Haz seleccionado los formatos Físico y Digital.",
+    "selectedPhysical": "Haz seleccionado el formato Físico.",
+    "selectedDigital": "Haz seleccionado el formato Digital.",
+    "uploadFile": "Subir archivo:",
+    "saveButton": "Guardar"
+  },
+  "library": {
+    "viewDetailsButton": "Ver Detalles",
+    "promotedLabel": "Promocionado"
+  },
+  "viewDetailsBook": {
+    "title": "Título",
+    "author": "Autor",
+    "categories": "Categorias",
+    "description": "Description",
+    "price": "Precio",
+    "formats": "Formatos",
+    "statisticsButton": "Estadísticas",
+    "promoteButton": "Promocionar"
+  },
+  "commentsBook":
+  {
+    "comments": "Comentarios",
+    "date": "Fecha",
+    "content": "Contenido",
+    "rating": "Calificación",
+    "reportButton": "Reportar",
+    "eliminateButton": "Eliminar",
+    "respondButton": "Responder",
+    "cancelButton": "Cancelar",
+    "respondPlaceHolder": "Ingresa tu respuesta...",
+    "sendAnswerButton": "Enviar respuesta",
+    "noComments": "No hay comentarios disponibles para este libro."
+  },
+  "promoteBook":{
+    "promoteTitle": "Promociona tu libro",
+    "promoteDescription": "Establece un presupuesto para tu libro para ganar una mayor presencia dentro de la tienda. La cantidad seleccionada determinará el número de lectores potenciales a los que llegará tu promoción.",
+    "selectedPayment": "Pago Seleccionado",
+    "estimatedReach": "Alcance estimado",
+    "startDate": "Fecha de inicio",
+    "endDate": "Fecha final",
+    "promoteButton": "Promocionar"
+  },
+  "statisticsBook": {
+    "statisticsTitle": "Estadísticas del libro"
+  }
+}
